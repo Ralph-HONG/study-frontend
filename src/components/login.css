@@ -1,0 +1,392 @@
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+  }
+
+  a{
+    text-decoration: none;
+    color:  #878d96;
+  }
+
+  body,
+  button,
+  input,
+  select {
+    background-color: #ffffff;
+    font-family: Helvetica, Dotum, sans-serif;
+    font-size: 12px;
+  }
+
+  .form-login__info-h1{
+    font-size: 25px;
+
+  }
+
+  .form-login__info-p{
+    font-size: 16px;
+
+  }
+  
+  .error form-login__id-error-message, legend {
+    background-color: red;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+  }
+  
+  
+  /* Header */
+  
+  .header {
+    position: relative;
+    box-sizing: border-box;
+    width: 465px;
+    padding: 106px 0 53px;
+    margin: 0 auto;
+  }
+  
+  h1.header__logo-container {
+    margin: 0
+  }
+  
+  
+  /* 언어 선택 */
+  
+  
+  /* header 태그를 기준으로 위치 조정 */
+  
+  .header__lang-container {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+  
+  .header__lang-container .header__lang-select-list {
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 4px 10px 6px 8px;
+  }
+  
+  .header__lang-select-list {
+    height: 25px;
+    width: 83px;
+  }
+  
+  /* 로그인 form */
+  
+  .container {
+    position: relative;
+    box-sizing: border-box;
+    width: 465px;
+    padding: 106px 0 53px;
+    margin: 0 auto;
+  }
+  
+  
+  .form-login fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .form-login__id-input,
+  .form-login__password-input {
+    width: 460px;
+    height: 48px;
+    border: 1px solid #DADADA;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0 0 8px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* 아이디와 비밀번호 입력 div container */
+  input::placeholder {
+    font-size: 16px;
+    color: rgba(228, 226, 226, 0.712);
+  }
+
+  
+  /* 내부에 label 태그를 배치하기 위해서 position을 relative로 설정*/
+  
+  .form-login__id-container,
+  .form-login__password-container {
+      position: relative;
+  }
+  
+  /* 아이디와 비밀번호 label의 position을 absolute로 변경 */
+  
+  .form-login__id-label,
+  .form-login__password-label {
+      position: absolute;
+      top: -15px;
+      bottom: 0;
+      left: -3px;
+      width: 100%;
+      height: 10%;
+      transition: 0.2s;
+      font-size: 9px;
+      line-height: 48px;
+      color: #999999;
+      margin-left: 6px;
+  }
+  
+  .form-login__id-input:focus+label,
+  .form-login__password-input:focus+label {
+      top: -20%;
+      left: -10px;
+      font-size: 10px;
+  }
+  
+  /* input 입력 태그가 valid 상태일때 */
+  
+  .form-login__id-input:valid+label,
+  .form-login__password-input:valid+label {
+      top: -20%;
+      left: -10px;
+      font-size: 10px;
+  }
+  input:hover {
+    outline: 1.5px solid #5500ff;
+    border-radius: 5px;
+  }
+
+
+  input:focus {
+    outline: 1.5px solid #5500ff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 12px rgba(33, 33, 255, 0.3) ;
+  } 
+  
+  
+  /* 로그인 버튼 */
+  
+  .form-login__button {
+    background-color: #5500ff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 6px rgba(61, 80, 81, 0.08);
+    width: 460px;
+    height: 56px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    left: calc(50% - 45px/2 - 0.5px);
+    top: calc(50% - 24px/2);
+    line-height: 24px;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-style: normal;
+    border-radius : 3px;
+    cursor: pointer;
+  }
+
+  .form-login__button:hover {
+    box-shadow: 1px 5px 15px rgba(33, 111, 255, 0.3) ;
+  }
+
+  .form-login__button:active{
+    background-color: #4c00e5;
+  }
+
+  .form-login__button:disabled {
+    background: #ccc;
+  }
+  
+  /* 로그인 상태 유지 & 체크박스 */
+  
+  .form-login__maintain-check-container {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    display: inline-block;
+    width: 230px;
+  }
+  
+  .form-login__maintain-check-label {
+    position: absolute;
+    top: 5px;
+    left: -1px;
+    height: 35px;
+    width: 136px;
+    cursor: pointer;
+    background: url(#) no-repeat;
+  }
+  
+  .form-login__maintain-check-des {
+    position: absolute;
+    left: 30px;
+    font-size: 13px;
+  }
+  
+  
+  /*레지스터 도움이 필요하세요 계정 생성 표시*/
+  .form-login__register{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .form-login__register-p{
+    font-size: 12px;
+  }
+  .form-login__register-p1,
+  .form-login__register-p2,
+  .form-login__register-p3
+  {
+    color: #999999;
+    font-size: 10px;
+  }
+  
+  .form-login__register-a{
+    font-size: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .form-login__password-find{
+    font-size: 10px;
+    text-decoration: none;
+  }
+  
+  .form-login__id-find{
+    font-size: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  
+  
+  /* customized 이미지로 체크박스 표시 */
+  
+  .form-login__maintain-check-input {
+    position: absolute;
+    top: 2px;
+    left: -5px;
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+  }
+  
+  .form-login__maintain-check-input:checked+label {
+    background: url(#) no-repeat;
+  }
+  
+  /* 아이디, 비밀번호 에러 메시지 */
+  
+  .error {
+    display: none;
+    font-size: 13px;
+    line-height: 18px;
+    color: #FF1414;
+  }
+  
+  .form-login__id-error-message {
+    margin-bottom: 8px;
+  }
+  
+  
+  
+  
+  /* For below 768px screen width(모바일 대응) */
+  
+  @media screen and (max-width: 768px) {
+    .form-login__id-input,
+    .form-login__password-input,
+    .form-login__button,
+    .form-login__register {
+        width: 290px;
+    }
+    
+    /* 모바일 화면에서는 IP보안 선택란이 보이지 않게 처리한다. */
+    .form-login__ip-security-container {
+        display: none;
+    }
+  
+    /* 모바일 화면에서는 도움이 필요하세요? 문구는 보이지 않게 처리한다. */
+    .form-login__register-p,
+    .form-login__register-p1{
+      display: none;
+    }
+  
+    
+    .form-login__id-container,
+    .form-login__password-container,
+    .form-login__maintain-check-and-ip-security-container,
+    .form-login__button-container {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .form-login__maintain-check-and-ip-security-container {
+        margin-bottom: 5px;
+    }
+    /* 로그인 페이지 로고 사이즈 조정 */
+    .header__logo-link {
+        display: block;
+        width: 165px;
+        height: 32px;
+        margin: 0 auto;
+    }
+    .header__logo-img {
+        width: 165px;
+        height: 32px;
+    }
+    .header {
+        width: 465px;
+        padding: 106px 0 35px;
+    }
+    /* 언어 선택 dropdown list의 우측 좌표 변경 */
+    .header__lang-container {
+        right: 90px;
+    }
+  
+  }
+  /* .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+  
