@@ -16,7 +16,7 @@ export const NotFound = () => {
           type="submit" 
           value="back " >
             {/* 로그인 페이지로 연결됨 나중에 Home 으로변경해야 함 */}
-                      <Link className='notfound-link' to="" style={{ textDecoration: "none" }}>
+                      <Link className='notfound-link' to="/" style={{ textDecoration: "none" }}>
                         홈으로 
                          </Link>
           
@@ -25,8 +25,8 @@ export const NotFound = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
 
 export default NotFound;
